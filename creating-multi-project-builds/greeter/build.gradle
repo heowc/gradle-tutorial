@@ -1,0 +1,17 @@
+plugins {
+    // https://docs.gradle.org/6.0.1/userguide/java_plugin.html
+    //id 'java' // java support(compile, test, build, ...)
+    // https://docs.gradle.org/6.0.1/userguide/application_plugin.html
+    //id 'application'  // make executable JVM application
+    id 'groovy'
+}
+
+// mainClassName = 'greeter.Greeter' 
+
+dependencies {
+    compile project(':greeting-library') 
+
+    testCompile 'org.spockframework:spock-core:1.0-groovy-2.4', {
+        exclude module: 'groovy-all'
+    }
+}
