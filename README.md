@@ -1,2 +1,4 @@
 # gradle-tutorial
-https://gradle.org/guides/
+
+- version: 6.0.1
+- https://gradle.org/guides/
