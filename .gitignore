@@ -8,6 +8,7 @@ bin
 
 # vscode
 .settings
+.vscode
 
 # etc
 .project
