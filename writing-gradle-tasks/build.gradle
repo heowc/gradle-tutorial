@@ -1,0 +1,40 @@
+//tasks.register("hello") {
+//    doLast {
+//        println 'Hello, World!'
+//    }
+//}
+
+//tasks.register("hello") {
+//    group = 'Welcome'
+//    description = 'Produces a greeting'
+//
+//    doLast {
+//        println 'Hello, World!'
+//    }
+//}
+
+class Greeting extends DefaultTask {
+    @Input
+    String message
+    @Input
+    String recipient
+
+    @TaskAction
+    void sayGreeting() {
+        println "${message}, ${recipient}!"
+    }
+}
+
+tasks.register("hello", Greeting) {
+    group = 'Welcome'
+    description = 'Produces a world greeting'
+    message = 'Hello'
+    recipient = 'World'
+}
+
+tasks.register("gutenTag", Greeting) {
+    group = 'Welcome'
+    description = 'Produces a German greeting'
+    message = 'Guten Tag'
+    recipient = 'Welt'
+}
