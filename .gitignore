@@ -10,5 +10,8 @@ bin
 .settings
 .vscode
 
-# etc
+# intellij idea
+.idea
+
+# eclipse
 .project
